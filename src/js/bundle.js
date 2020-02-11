@@ -7,7 +7,7 @@ var card = new Vue({
         name: 'gabriel gripp',
         title: 'developer & ux researcher',
         image: './src/img/profile.jpg',
-        about: 'javascript ❤️ vue',
+        about: 'vue ❤️ javascript',
         links: {
             linkedin: 'https://www.linkedin.com/in/grippado/',
             github: 'https://github.com/grippado/',
