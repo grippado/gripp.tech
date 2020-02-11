@@ -5,9 +5,9 @@ var card = new Vue({
     el: '.card',
     data: {
         name: 'gabriel gripp',
-        title: 'developer',
+        title: 'developer & ux researcher',
         image: './src/img/profile.jpg',
-        about: 'javascript ❤️',
+        about: 'javascript ❤️ vue',
         links: {
             linkedin: 'https://www.linkedin.com/in/grippado/',
             github: 'https://github.com/grippado/',
@@ -16,6 +16,7 @@ var card = new Vue({
         },
         vue: `
             -------   MADE WItH VUE AND ❤️  -------
+            ----------------------------------------
             ((((((((%%%%%%%%@@@@@@@@@%%%%%%%((((((((
             @@((((((((%%%%%%%@@@@@@@%%%%%%%((((((((@
             @@@((((((((%%%%%%%%@@@%%%%%%%%((((((((@@
@@ -30,6 +31,7 @@ var card = new Vue({
             @@@@@@@@@@@@@@@@(((((((((@@@@@@@@@@@@@@@
             @@@@@@@@@@@@@@@@@@(((((@@@@@@@@@@@@@@@@@
             @@@@@@@@@@@@@@@@@@@(((@@@@@@@@@@@@@@@@@@
+            ----------------------------------------
             ----------     gripp.tech     ----------
         `
     },
