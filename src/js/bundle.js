@@ -5,7 +5,7 @@ var card = new Vue({
     el: '.card',
     data: {
         name: 'gabriel gripp',
-        title: 'developer & ux researcher',
+        title: 'javascript developer & ux',
         image: './src/img/profile.jpg',
         about: 'vue  ❤️ javascript',
         links: {
