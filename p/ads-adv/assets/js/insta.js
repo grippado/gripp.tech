@@ -12,7 +12,7 @@ fetch(instaURL)
           <a href="https://www.instagram.com/p/${x.node.shortcode}">
             <img src="${x.node.display_url}">
           </a>
-        </li>`
+        </li>`;
     })
   });
 

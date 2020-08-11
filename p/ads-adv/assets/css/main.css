@@ -2211,6 +2211,10 @@
 			.box.person h3 {
 				margin: 0;
 			}
+			.box.person a {
+				font-size: 1.5em;
+				color: white;
+			}
 
 			.box.person .image {
 				margin-bottom: 1em;
@@ -3027,6 +3031,7 @@
 #instagram ul {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	flex-wrap: nowrap;
 }
 
@@ -3043,6 +3048,12 @@
 #instagram ul li a img{
 	width: 100%;
 	border: 1px solid #01203c;
+}
+
+#instagram h2 {
+	text-align: left;
+	font-size: 1.1em;
+	padding: 0 .6em;
 }
 @media screen and (max-width: 981px) {
 	#instagram ul {
