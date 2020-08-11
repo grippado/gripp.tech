@@ -2723,13 +2723,13 @@
 		padding-top: 44px;
 	}
 
-		.subpage #header {
-			background: #01203c;
-			top: 0;
-			height: 44px;
-			line-height: 44px;
-			position: fixed;
-		}
+	.subpage #header {
+		background: #01203c;
+		top: 0;
+		height: 44px;
+		line-height: 44px;
+		position: fixed;
+	}
 
 	#header {
 		color: #d4e0ef;
@@ -2747,6 +2747,8 @@
 		#header .inner {
 			margin: 0 auto;
 			position: relative;
+			display: flex;
+			justify-content: center;
 		}
 
 		#header .logo {
@@ -2772,16 +2774,13 @@
 			padding: 0 0.75em;
 			color: inherit;
 			text-decoration: none;
-			font-size: .8em;
+			font-size: 1.55em;
 		}
 
 			#header a:hover {
 				color: #ffffff;
 			}
 
-			#header a:last-child {
-				padding-right: 0;
-			}
 
 			#header a.navPanelToggle {
 				display: none;
@@ -3051,7 +3050,7 @@
 			}
 
 	#footer ul.icons li .icon {
-		font-size: 0.58em;
+		font-size: 0.75em;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -3083,5 +3082,8 @@
 			flex-direction: column;
 			text-align: center;
 		}
-
+		#footer .copyright,
+		#footer ul.icons li .icon {
+			font-size: 1.25em;
+		}
 	}
