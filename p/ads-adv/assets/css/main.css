@@ -2911,7 +2911,6 @@
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
 			width: 5em;
 		}
 
@@ -3024,6 +3023,41 @@
 			}
 
 		}
+/* Instagram */
+#instagram ul {
+	list-style: none;
+	padding: 0;
+	flex-wrap: nowrap;
+}
+
+#instagram ul li {
+	width: 23%;
+}
+
+#instagram ul li {
+	padding: 0;
+}
+
+/* #instagram ul li a {} */
+
+#instagram ul li a img{
+	width: 100%;
+	border: 1px solid #01203c;
+}
+@media screen and (max-width: 981px) {
+	#instagram ul {
+		flex-wrap: wrap;
+	}
+	#instagram ul li {
+		width: 49%;
+	}
+}
+@media screen and (max-width: 736px) {
+	#instagram ul li {
+		width: 90%;
+	}
+}
+
 
 /* Footer */
 
