@@ -1,86 +1,69 @@
 <template>
-<article class="content">
-  <a href="https://github.com/grippado/gripp.tech">
-    <img class="forkmeongh" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub">
-  </a>
-  <section class="card">
-    <img v-bind:src="image">
-    <h1>
-      {{ name }}
-    </h1>
-    <h2>
-      {{ title }}
-    </h2>
-    <p>
-      {{about}}
-    </p>
-    <ul>
-      <li class="linkedin">
-        <a v-bind:href="links.linkedin" title="Linkedin">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
-      </li>
-      <li class="github">
-        <a v-bind:href="links.github" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-        </a>
-      </li>
-      <li class="facebook">
-        <a v-bind:href="links.facebook" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </section>
-</article>
+  <article class="content">
+    <a href="https://github.com/grippado/gripp.tech">
+      <img class="forkmeongh" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub">
+    </a>
+    <section class="card">
+      <img v-bind:src="image">
+      <h1>
+        {{ name }}
+      </h1>
+      <h2>
+        {{ title }}
+      </h2>
+      <p>
+        {{ about }}
+      </p>
+      <ul>
+        <li v-for="(link,index) of links" :key="index">
+          <a :href="link.url" :alt="link.title" v-html="link.icon"/>
+        </li>
+      </ul>
+    </section>
+  </article>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  data() {
+  data () {
     return {
       name: 'gabriel gripp',
       title: 'developer',
       image: '/img/profile.jpg',
-      about: '❤️ vue & javascript ❤️',
-      links: {
-        linkedin: 'https://www.linkedin.com/in/grippado/',
-        github: 'https://github.com/grippado/',
-        facebook: 'https://www.facebook.com/grippado/',
-
+      about: 'javascript & vue',
+      links: [{
+        url: 'https://www.linkedin.com/in/grippado/',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>`,
+        title: 'Linkedin'
       },
-      vue: `
-          -------   MADE WItH VUE AND ❤️  -------
-          ----------------------------------------
-          ((((((((%%%%%%%%@@@@@@@@@%%%%%%%((((((((
-          @@((((((((%%%%%%%@@@@@@@%%%%%%%((((((((@
-          @@@((((((((%%%%%%%%@@@%%%%%%%%((((((((@@
-          @@@@@((((((((%%%%%%%@%%%%%%%((((((((@@@@
-          @@@@@@((((((((%%%%%%%%%%%%%((((((((@@@@@
-          @@@@@@@@((((((((%%%%%%%%%((((((((@@@@@@@
-          @@@@@@@@@((((((((%%%%%%%((((((((@@@@@@@@
-          @@@@@@@@@@((((((((%%%%((((((((&@@@@@@@@@
-          @@@@@@@@@@@@((((((((%((((((((@@@@@@@@@@@
-          @@@@@@@@@@@@@(((((((((((((((@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@(((((((((((@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@(((((((((@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@(((((@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@@(((@@@@@@@@@@@@@@@@@@
-          ----------------------------------------
-          ----------     gripp.tech     ----------
-      `
+      {
+        url: 'https://github.com/grippado/',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>`,
+        title: 'Github'
+      },
+      {
+        url: 'https://www.facebook.com/grippado/',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>`,
+        title: 'Facebook'
+      },
+      {
+        url: 'https://www.twitter.com/grippado/',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>`,
+        title: 'Twitter'
+      }]
     }
-  },
-  mounted() {
-    console.log(this.vue)
   }
 })
 </script>
