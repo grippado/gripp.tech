@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^1",
-    "@nuxt/types": "^2.14.6",
+    "@nuxt/types": "^2.14.11",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
