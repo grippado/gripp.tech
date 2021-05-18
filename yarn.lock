@@ -1189,15 +1189,15 @@
     webpack-node-externals "^2.5.2"
     webpackbar "^4.0.0"
 
-"@nuxtjs/axios@^5.13.1":
-  version "5.13.1"
-  resolved "https://registry.npmjs.org/@nuxtjs/axios/-/axios-5.13.1.tgz"
+"@nuxtjs/axios@^5.13.3":
+  version "5.13.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.13.3.tgz#5b8e2600569a985883c4a93663d2c28eb65bc60a"
   dependencies:
     "@nuxtjs/proxy" "^2.1.0"
     axios "^0.21.1"
     axios-retry "^3.1.9"
     consola "^2.15.3"
-    defu "^3.2.2"
+    defu "^5.0.0"
 
 "@nuxtjs/eslint-config-typescript@^5.0.0":
   version "5.0.0"
@@ -3196,6 +3196,10 @@ defu@^2.0.4:
 defu@^3.2.2:
   version "3.2.2"
   resolved "https://registry.npmjs.org/defu/-/defu-3.2.2.tgz"
+
+defu@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-5.0.0.tgz#5768f0d402a555bfc4c267246b20f82ce8b5a10b"
 
 delegate@^3.1.2:
   version "3.2.0"
