@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Viewport Resolution testing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" type="text/css" href="./resx/css.css">
+</head>
+
+<body>
+	<div class="width_v"></div>
+	<div class="height_v"></div>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript">
+  		$(function(){
+  			$('.width_v').text($(window).width() + 'px');
+  			$('.height_v').text($(window).height() + 'px');
+  			$(window).on('resize',function(){
+  				windowHeight = $(window).height();
+  				windowWidth = $(window).width();
+  				$('.width_v').text(windowWidth + 'px');
+  				$('.height_v').text(windowHeight + 'px');
+  			})
+  		});
+  </script>
+</body>
+</html>

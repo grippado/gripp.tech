@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pah & Gab - Next Trip Countdown</title>
+    <style>
+        *{
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+            background: url('https://viajaresimples.files.wordpress.com/2014/02/vitoria_aretakis-2-de-6.jpg') no-repeat center center transparent;
+            background-size: cover;
+        }
+        h1{
+            font-size: 3rem;
+            background: rgba(255,255,255,.5);
+            display: inline;
+            padding: 0 10px;
+        }
+        #timer{
+            font-size: 1.9rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px;
+        }
+        #timer > div{
+            margin-right: 15px;
+            background: #000;
+            color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+        }
+        #timer span{
+            font-size: 0.9rem;
+            color: grey;
+        }
+        p{
+            font-size: 2.2rem;
+            background: rgba(255,255,255,.5);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>FALTAM</h1>
+    <div id="timer"></div>
+    <p>para a próxima viagem da Pah e do Gabi</p>
+    <script>
+        let actual = new Date();
+            actual = actual.getTime();
+            actual = parseInt(actual / 1000) 
+        
+        let count = 1560936300;
+            count = count - actual
+
+        const counter = setInterval(timer, 1000);
+        function timer() {
+            count = count - 1;
+            if (count <= 0) {
+                clearInterval(counter);
+                return;
+            }
+            let varDay  = Math.floor(count / 86400)
+            let varHour = Math.floor(count / 3600) % 24
+            let varMin = Math.floor(count / 60) % 60
+            let varSec = count % 60
+
+            //DAYS
+            let countD = varDay;
+
+            //HOURS
+            if (varHour >= 10) {
+                countH = varHour;
+            }
+            else {
+                countH = '0' + varHour;
+            }
+
+            //MINUTES
+            if (varMin >= 10) {
+                countM = varMin;
+            }
+            else {
+                countM = '0' + varMin;
+            }
+
+            //SECONDS
+            if (varSec == 60) {
+                countS = '00';
+            }
+            else
+            if(varSec >= 10) {
+                countS = varSec;
+            }
+            else {
+                countS = '0' + varSec;
+            }
+            //write on html
+            // document.getElementById("timer").innerHTML = countD + ':' + countH + ':' + countM + ':' + countS;
+            document.getElementById("timer").innerHTML = '<div>' + countD +' <span>DIAS</span></div><div>'+ countH +' <span>HORAS</span></div><div>'+ countM +' <span>MINUTOS</span></div><div>'+ countS + ' <span>SEGUNDOS</span></div>'
+
+        }
+    </script>
+</body>
+</html>
