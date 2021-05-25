@@ -28,11 +28,11 @@ export default {
   }
   h2 {
     color: #fff;
-    font-size: 55px;
+    font-size: 40px;
   }
   span {
     color: #808080;
-    font-size: 22px;
+    font-size: 18px;
     display: block;
     text-align: center;
   }
@@ -51,6 +51,12 @@ img {
     }
     div:nth-child(2) {
       order: 2;
+    }
+    h2 {
+      font-size: 55px;
+    }
+    span {
+      font-size: 24px;
     }
   }
   img {

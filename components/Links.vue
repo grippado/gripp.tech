@@ -1,6 +1,8 @@
 <template>
   <div class="container links">
-    sjvnsjan
+    <p class="title">
+      Links
+    </p>
   </div>
 </template>
 
@@ -14,28 +16,6 @@ export default {
 
 <style lang="scss">
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: calc(100vh - 120px);
-  div:nth-child(1) {
-    order: 2;
-  }
-  div:nth-child(2) {
-    order: 1;
-  }
-  h2 {
-    color: #fff;
-    font-size: 55px;
-  }
-  span {
-    color: #808080;
-    font-size: 22px;
-    display: block;
-    text-align: center;
-  }
 }
 img {
   width: 300px;
@@ -43,9 +23,6 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .container {
-    flex-direction: row;
-    width: calc(100% - 250px);
-    height: 100vh;
     div:nth-child(1) {
       order: 1;
     }

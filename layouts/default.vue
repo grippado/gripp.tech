@@ -57,11 +57,14 @@ html {
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 200px);
   transition: 0.21s all ease-in-out;
+}
+.container.home {
+  padding-top: 20px;
 }
 .container.about,
 .container.xp,
@@ -70,11 +73,23 @@ html {
   color: #fff;
 }
 @media screen and (min-width: 1024px) {
+  .container {
+    justify-content: space-evenly;
+  }
   .container.about,
   .container.xp,
   .container.links {
     padding: 50px;
     color: #fff;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .container.about .title,
+  .container.xp .title,
+  .container.links .title {
+    font-size: 33px;
+    margin-bottom: 30px;
   }
 }
 </style>

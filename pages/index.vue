@@ -40,9 +40,6 @@ export default {
 }
 </script>
 
-<style lang="sass">
-</style>
-
 <style lang="scss">
 section {
   overflow: hidden;
