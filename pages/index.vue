@@ -126,7 +126,7 @@ section {
   position: fixed;
   justify-content: space-around;
   right: 10px;
-  bottom: 10px;
+  bottom: 20px;
   width: calc(100% - 20px);
   height: 90px;
   border-radius: 50px;

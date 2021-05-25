@@ -71,6 +71,18 @@ html {
 .container.links {
   padding: 20px;
   color: #fff;
+  align-items: flex-start;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.container.about .title,
+.container.xp .title,
+.container.links .title {
+  font-size: 33px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -82,14 +94,7 @@ html {
     padding: 50px;
     color: #fff;
     justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
-  }
-  .container.about .title,
-  .container.xp .title,
-  .container.links .title {
-    font-size: 33px;
-    margin-bottom: 30px;
   }
 }
 </style>
