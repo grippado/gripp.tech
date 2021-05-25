@@ -12,6 +12,7 @@
       <span @click="selectS">me</span>
       <span @click="selectT">xp</span>
       <span @click="selectF">links</span>
+      <!-- <span @click="selectF">Blog</span> -->
     </div>
   </section>
 </template>
@@ -35,6 +36,9 @@ export default {
     },
     selectF () {
       this.menuSelected = 'sel-4'
+    },
+    selectB () {
+      this.menuSelected = 'sel-5'
     }
   }
 }
